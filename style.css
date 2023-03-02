@@ -1,0 +1,279 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Mulish, sans-serif;
+}
+
+html {
+    background-color: #FBFBFB;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0px 5px 5px rgb(240, 233, 233);
+    background-color: white;
+    margin-bottom: 30px;
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.left-part {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    color: #8a584b;
+}
+
+.right-part {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: white;
+    color: #8a584b;
+}
+
+.logo {
+    width: 45px;
+}
+
+.nav-container>.left-part a:hover {
+    color: rgb(235, 89, 36);
+}
+
+.right-part>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu {
+    display: none !important;
+}
+
+.nav-container1 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0 10px 0;
+    border-bottom: 1px solid grey;
+    margin-top: 10px;
+}
+
+.nav-container1>.right-half {
+    display: flex;
+    gap: 20px;
+
+}
+
+.nav-container1>.right-half>span {
+    font-weight: 300px;
+}
+
+.container {
+    width: 77vw;
+    margin: auto;
+}
+
+/* card css*/
+
+.card {
+    padding: 10px;
+    width: 200px;
+    position: relative;
+    padding-bottom: 0;
+
+}
+
+.card-image {
+    width: 200px;
+}
+
+.card p {
+    margin: 5px 0;
+    color: #8a584b;
+}
+
+.rating-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 0.5px solid gray;
+    font-size: 14px;
+    color: #8a584b;
+
+}
+
+.bullet {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #72493f;
+
+}
+
+.offer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 0.5px solid gray;
+    font-size: 14px;
+    color: #8a584b;
+
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+    flex-flow: row wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.card:hover {
+    outline: 0.5px solid gray;
+}
+
+.rating-container>.rating {
+    display: flex;
+    align-items: center;
+    background-color: rgb(247, 99, 45);
+    color: white;
+    padding: 2px;
+    font-size: 13px;
+}
+
+.rating-container>.rating1 {
+    display: flex;
+    align-items: center;
+    background-color: rgb(6, 150, 6);
+    color: white;
+    padding: 5px;
+    font-size: 13px;
+}
+
+.star {
+    font-size: 13px !important;
+}
+
+.card::before {
+    content: 'PROMOTED';
+    display: block;
+    position: absolute;
+    background-color: rgb(58, 60, 65);
+    color: white;
+    padding: 5px;
+    left: 5px;
+    font-size: 12px;
+}
+
+.btn {
+    display: block;
+    border: none;
+    font-weight: bold;
+    color: rgb(112, 112, 248);
+    background-color: white;
+    margin: 5px auto;
+    padding: 5px 0;
+    visibility: hidden;
+}
+
+.card:hover .btn {
+    visibility: visible;
+}
+
+/*footer*/
+
+.footer {
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 100px;
+}
+
+.footer h4 {
+    color: #808080;
+    margin: 10px 0;
+}
+
+.footer>div {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer>div>a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer img {
+    width: 150px;
+    border: 2px solid gray;
+    transition-duration: 0.5s;
+    border-radius: 5px;
+}
+
+.footer img:hover {
+    width: 155px;
+}
+
+.store-container {
+    align-items: center;
+}
+
+.footer a {
+    font-weight: 300;
+}
+
+.footer a:hover {
+    font-weight: bold;
+}
+
+
+@media (max-width: 800px) {
+    .card-container {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .footer {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .menu {
+        display: block !important;
+    }
+
+    .right-part {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .card-container {
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+
+    .footer {
+        grid-template-columns: auto;
+        gap: 20px;
+    }
+
+}
